@@ -124,9 +124,9 @@ const TradingForm1 = (props) => {
                                 className={styles.input}
                                 id={tradeData[pageCount].id}
                                 onChange={(e) => changeTradeData(e, tradeData[pageCount].id)}
-                                value={tradeData[pageCount].trade1}
-                                placeholder='CE Strike'
-                                name='trade1'
+                                value={tradeData[pageCount].trade}
+                                placeholder='Strike Price'
+                                name='trade'
                                 type='text'
                                 required
                             />
@@ -134,9 +134,9 @@ const TradingForm1 = (props) => {
                                 className={styles.input2}
                                 id={tradeData[pageCount].id}
                                 onChange={(e) => changeTradeData(e, tradeData[pageCount].id)}
-                                value={tradeData[pageCount].entry1}
+                                value={tradeData[pageCount].entry}
                                 placeholder='Entry'
-                                name='entry1'
+                                name='entry'
                                 type='number'
                                 required
                             />
@@ -144,9 +144,9 @@ const TradingForm1 = (props) => {
                                 className={styles.input2}
                                 id={tradeData[pageCount].id}
                                 onChange={(e) => changeTradeData(e, tradeData[pageCount].id)}
-                                value={tradeData[pageCount].sl1}
+                                value={tradeData[pageCount].sl}
                                 placeholder='StopLoss'
-                                name='sl1'
+                                name='sl'
                                 type='number'
                                 required
                             />
@@ -154,9 +154,9 @@ const TradingForm1 = (props) => {
                                 className={styles.input2}
                                 id={tradeData[pageCount].id}
                                 onChange={(e) => changeTradeData(e, tradeData[pageCount].id)}
-                                value={tradeData[pageCount].target1}
+                                value={tradeData[pageCount].target}
                                 placeholder='Target'
-                                name='target1'
+                                name='target'
                                 type='number'
                                 required
                             />
@@ -164,9 +164,9 @@ const TradingForm1 = (props) => {
                                 className={styles.input2}
                                 id={tradeData[pageCount].id}
                                 onChange={(e) => changeTradeData(e, tradeData[pageCount].id)}
-                                value={tradeData[pageCount].exit1}
+                                value={tradeData[pageCount].exit}
                                 placeholder='Exit Price'
-                                name='exit1'
+                                name='exit'
                                 type='number'
                                 required
                             />
@@ -174,78 +174,15 @@ const TradingForm1 = (props) => {
                                 className={styles.input2}
                                 id={tradeData[pageCount].id}
                                 onChange={(e) => changeTradeData(e, tradeData[pageCount].id)}
-                                value={tradeData[pageCount].qty1}
+                                value={tradeData[pageCount].qty}
                                 placeholder='Qty'
-                                name='qty1'
+                                name='qty'
                                 type='number'
                                 required
                             />
 
                         </div>
 
-                        <div className={styles.eachtrade}>
-                            <input
-                                className={styles.input}
-                                id={tradeData[pageCount].id}
-                                onChange={(e) => changeTradeData(e, tradeData[pageCount].id)}
-                                value={tradeData[pageCount].trade2}
-                                placeholder='PE Strike'
-                                name='trade2'
-                                type='text'
-                                required
-                            />
-                            <input
-                                className={styles.input2}
-                                id={tradeData[pageCount].id}
-                                onChange={(e) => changeTradeData(e, tradeData[pageCount].id)}
-                                value={tradeData[pageCount].entry2}
-                                placeholder='Entry'
-                                name='entry2'
-                                type='number'
-                                required
-                            />
-                            <input
-                                className={styles.input2}
-                                id={tradeData[pageCount].id}
-                                onChange={(e) => changeTradeData(e, tradeData[pageCount].id)}
-                                value={tradeData[pageCount].sl2}
-                                placeholder='StopLoss'
-                                name='sl2'
-                                type='number'
-                                required
-                            />
-                            <input
-                                className={styles.input2}
-                                id={tradeData[pageCount].id}
-                                onChange={(e) => changeTradeData(e, tradeData[pageCount].id)}
-                                value={tradeData[pageCount].target2}
-                                placeholder='Target'
-                                name='target2'
-                                type='number'
-                                required
-                            />
-                            <input
-                                className={styles.input2}
-                                id={tradeData[pageCount].id}
-                                onChange={(e) => changeTradeData(e, tradeData[pageCount].id)}
-                                value={tradeData[pageCount].exit2}
-                                placeholder='Exit Price'
-                                name='exit2'
-                                type='number'
-                                required
-                            />
-                            <input
-                                className={styles.input2}
-                                id={tradeData[pageCount].id}
-                                onChange={(e) => changeTradeData(e, tradeData[pageCount].id)}
-                                value={tradeData[pageCount].qty2}
-                                placeholder='Qty'
-                                name='qty2'
-                                type='number'
-                                required
-                            />
-
-                        </div>
                         <div className={styles.task}>
                             <textarea
                                 className={styles.input}

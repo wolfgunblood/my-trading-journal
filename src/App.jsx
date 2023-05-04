@@ -67,19 +67,14 @@ const App = () => {
     {
       isHover: false,
       id: uniqid(),
-      trade1: "",
-      sl1: "",
-      target1: "",
-      exit1: "",
-      entry1: "",
-      qty1:"",
+      trade: "",
+      sl: "",
+      target: "",
+      exit: "",
+      entry: "",
+      qty:"",
       description: "",
-      trade2: "",
-      sl2: "",
-      target2: "",
-      exit2: "",
-      entry2: "",
-      qty2:"",
+     
       
     },
   ]
@@ -108,17 +103,12 @@ const App = () => {
       isHover: false,
       id: uniqid(),
       trade1: "",
-      sl1: "",
-      target1: "",
-      exit1: "",
-      entry1: "",
-      qty1: "",
-      trade2: "",
-      sl2: "",
-      target2: "",
-      exit2: "",
-      entry2: "",
-      qty2: "",
+      sl: "",
+      target: "",
+      exit: "",
+      entry: "",
+      qty: "",
+      description: "",
       
     },
 
@@ -174,7 +164,7 @@ const App = () => {
 
   const [mobile, setMobile] = useState(true);
   const [tdate, setTdate] = useState("");
-  const [isEquity, setIsEquity] = useState(true);
+  const [isEquity, setIsEquity] = useState(false);
   const [isTarget, setIsTarget] = useState(false);
   const [isSl, setIsSL] = useState(false);
   const [isExit, setIsExit] = useState(false);

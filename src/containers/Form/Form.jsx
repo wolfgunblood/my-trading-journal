@@ -56,37 +56,10 @@ const Form = (props) => {
       <AppLabel
         printDoc={printDoc}
       />
-      <div className={styles['form-container']}>
-
         <DatePicker
           tdate={tdate}
           setTdate={setTdate}
         />
-        <InstrumentOption
-          isEquity={isEquity}
-          setIsEquity={setIsEquity}
-        />
-      </div>
-
-      {/* <PracticalForm
-          experience ={experience}
-          newExperience = {newExperience}
-          skills = {skills}
-          newSkill = {newSkill}
-          changeExperience = {changeExperience}
-          changeSkill = {changeSkill}
-          addExperience = {addExperience}   
-          removeExp = {removeExp}
-          addSkill={addSkill}
-          removeSkill={removeSkill}     
-        /> */}
-      {/* <TradingForm
-        tradeData={tradeData}
-        setTradeData={setTradeData}
-        changeTradeData={changeTradeData}
-        addTradeData={addTradeData}
-        removeTrade={removeTrade}
-      /> */}
       {!isEquity &&
         <TradingForm1
           tradeData={tradeData}
