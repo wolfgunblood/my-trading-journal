@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+    background-color: #1c1c1c;
+    padding: 3.75% 5% 4.25% 5%;
+    border-radius: 12px;
+    align-items: center;
+    max-width: 30%;
+}
+
+.label-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 8px;
+
+    h2{
+        display: flex;
+        margin-bottom: 20px;
+    }
+    form{
+        display: flex;
+        label{
+            display: inline-block;
+            color: aliceblue;
+        }
+    }
+    
+    
+}
