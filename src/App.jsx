@@ -102,7 +102,7 @@ const App = () => {
     {
       isHover: false,
       id: uniqid(),
-      trade1: "",
+      trade: "",
       sl: "",
       target: "",
       exit: "",

@@ -9,6 +9,7 @@ import {
   StatArrow,
   StatGroup,
 } from '@chakra-ui/react'
+import { Text } from '@chakra-ui/react'
 
 import {
   Table,
@@ -23,70 +24,50 @@ import {
 } from '@chakra-ui/react';
 
 const Tradepreview = ({ tradeInfo, index }) => {
-  const {
-    trade1,
-    trade2,
-    entry1,
-    entry2,
-    sl1,
-    sl2,
-    target1,
-    target2,
-    exit1,
-    exit2,
-    qty1,
-    qty2,
-    description,
-    value,
-  } = tradeInfo;
-
-  const total = qty1 * (exit1 - entry1) + qty2 * (exit2 - entry2);
-  const isTotal = total <  0 ? true : false;
-
 
   return (
     <div className={styles.header}>
       <div className={styles.tableContainer}>
-        <h3>{`Trade ${index + 1}`}</h3>
+        <h3>{`Trade Table`}</h3>
         {/* {console.log(index)} */}
-        <TableContainer className={styles.table}>
-          <Table variant='simple'>
-            <TableCaption>{description}</TableCaption>
+        <TableContainer className={styles.table} size="sm">
+          <Table variant='simple' >
+            <TableCaption></TableCaption>
             <Thead>
               <Tr>
                 <Th>Trade Name</Th>
                 <Th>Entry</Th>
                 <Th>Stop Loss</Th>
-                <Th>Target</Th>
                 <Th>Exit</Th>
+                <Th>Description</Th>
               </Tr>
             </Thead>
             <Tbody>
-              <Tr>
-                <Td>{trade1}</Td>
-                <Td>{entry1}</Td>
-                <Td>{sl1}</Td>
-                <Td isNumeric>{target1}</Td>
-                <Td isNumeric>{exit1}</Td>
-              </Tr>
-              <Tr>
-                <Td>{trade2}</Td>
-                <Td>{entry2}</Td>
-                <Td>{sl2}</Td>
-                <Td isNumeric>{target2}</Td>
-                <Td isNumeric>{exit2}</Td>
-              </Tr>
-
+              {tradeInfo.map((trade, index) => (
+                <Tr key={index}>
+                  <Td>{trade.trade}</Td>
+                  <Td>{trade.entry}</Td>
+                  <Td>{trade.sl}</Td>
+                  <Td isNumeric>{trade.exit}</Td>
+                  <Td isNumeric>
+                    <div className={styles.descriptionTable}>
+                      <Text>
+                        {trade.description}
+                        </Text>
+                    </div>
+                  </Td>
+                </Tr>
+              ))}
             </Tbody>
           </Table>
         </TableContainer>
-        <Stat>
+        {/* <Stat>
           <StatLabel>Totl Profit Loss</StatLabel>
           <StatNumber>{total}</StatNumber>
           <StatHelpText>
           { total === 0 ? <Badge colorScheme='gray'>No Profit/Loss</Badge> : isTotal ? <Badge colorScheme='red'>Loss</Badge> : <Badge colorScheme='green'>Profit</Badge>}
           </StatHelpText>
-        </Stat>
+        </Stat> */}
       </div>
     </div>
   )

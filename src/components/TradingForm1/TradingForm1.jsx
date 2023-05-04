@@ -192,6 +192,8 @@ const TradingForm1 = (props) => {
                                 placeholder='Note to self'
                                 name='description'
                                 type='text'
+                                rows={5}
+                                cols={10}
                                 required
                             />
                         </div>
@@ -201,7 +203,7 @@ const TradingForm1 = (props) => {
                   
                 </div>
                 {
-                    tradeData.length < 10 ? (
+                    tradeData.length < 40 ? (
                         <div className={styles.addBtnTrade}>
 
                             <IconButton
