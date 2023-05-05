@@ -30,7 +30,26 @@ const Tradepreview = ({ tradeInfo, index }) => {
       <div className={styles.tableContainer}>
         <h3>{`Trade Table`}</h3>
         {/* {console.log(index)} */}
-        <TableContainer className={styles.table} size="sm">
+        <div className={styles.tableHeader}>
+          <h5>Trade Name</h5>
+          <h5>Entry</h5>
+          <h5>Stop Loss</h5>
+          <h5>Exit</h5>
+        </div>
+        {tradeInfo.map((trade, index) => (
+          <div className={styles.tableRow} key={index}>
+            <div className={styles.tableData}>
+              <p>{trade.trade}</p>
+              <p>{trade.entry}</p>
+              <p>{trade.sl}</p>
+              <p>{trade.exit}</p>
+            </div>
+            <div className={styles.description}>
+              <p>{trade.description}</p>
+            </div>
+          </div>
+        ))}
+        {/* <TableContainer className={styles.table} size="sm">
           <Table variant='simple' >
             <TableCaption></TableCaption>
             <Thead>
@@ -53,14 +72,14 @@ const Tradepreview = ({ tradeInfo, index }) => {
                     <div className={styles.descriptionTable}>
                       <Text>
                         {trade.description}
-                        </Text>
+                      </Text>
                     </div>
                   </Td>
                 </Tr>
               ))}
             </Tbody>
           </Table>
-        </TableContainer>
+        </TableContainer> */}
         {/* <Stat>
           <StatLabel>Totl Profit Loss</StatLabel>
           <StatNumber>{total}</StatNumber>

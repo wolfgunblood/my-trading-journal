@@ -8,7 +8,7 @@ const AppLabel = ({printDoc}) => {
   return (
     <div className={styles.label}>
       <div className={styles['label-header']}>
-        <h2>Journal</h2>
+        <h2>My Trading Journal</h2>
         <div>
           <button className={styles.save}>
             <img 

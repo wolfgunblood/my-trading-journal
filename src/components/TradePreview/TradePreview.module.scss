@@ -1,28 +1,50 @@
-.header{
+.header {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
     background-color: #fff;
     width: 100%;
     padding: 2.5% 2.5%;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 
-    
-    .tableContainer{
+
+    .tableContainer {
         display: flex;
         flex-direction: column;
-    
-        .table{
-            height: 100%;
+        width: 100%;
+        padding: 2% 2%;
 
-            .descriptionTable{
-                width: 50px;
 
+        .tableHeader {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .tableRow {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            
+
+            .tableData {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+            }
+            .description{
+                width: 100%;
+                display: flex;
+                justify-content: flex-start;
+                margin-bottom: 10px;
             }
         }
+
     }
-    h3{
+
+    h3 {
         color: black;
     }
 }
